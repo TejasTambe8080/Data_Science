@@ -1,0 +1,121 @@
+🧠 PART 1 — THEORY (INTERVIEW LEVEL)
+🔹 List vs Tuple vs Dictionary (IMPORTANT)
+Feature	List	Tuple	Dictionary
+Mutable	✅ Yes	❌ No	✅ Yes
+Ordered	✅	✅	✅ (Python 3.7+)
+Use Case	General data	Fixed data	Key-value mapping
+🔹 List Operations (Industry Use)
+nums = [1,2,3]
+
+nums.append(4)
+nums.remove(2)
+nums.sort()
+
+👉 Used in:
+
+Data preprocessing
+Feature lists
+Iterations
+🔹 List Comprehension (VERY IMPORTANT)
+squares = [x*x for x in range(5)]
+
+👉 Interview favorite
+👉 Cleaner + faster
+
+🔹 Dictionary (CRITICAL)
+student = {"name": "Tejas", "marks": 90}
+
+👉 Used in:
+
+JSON data
+APIs
+Real-world datasets
+🔹 String Handling (REAL DATA SKILL)
+text = " Data Science "
+
+print(text.strip())
+print(text.lower())
+print(text.replace("Science", "Analytics"))
+
+👉 Why important?
+
+Real data is messy (extra spaces, wrong format)
+💻 PART 2 — HANDS-ON PRACTICE (MANDATORY)
+✅ Task 1: List Filtering
+nums = [10, 25, 30, 45, 60]
+# Output: numbers > 30
+✅ Task 2: List Comprehension
+# Create list of even numbers from 1–20
+✅ Task 3: Dictionary Practice
+students = {
+    "A": 80,
+    "B": 40,
+    "C": 90
+}
+
+# Find topper
+✅ Task 4: String Cleaning
+text = "  Data SCIENCE  "
+# Output: "data science"
+🏭 PART 3 — INDUSTRY TASK (REAL SCENARIO)
+
+👉 Raw data example:
+
+names = [" Tejas ", "RAHUL", "anita  "]
+🎯 Your job:
+Remove spaces
+Convert to lowercase
+Output clean list
+
+👉 Expected:
+
+["tejas", "rahul", "anita"]
+📊 PART 4 — DATA THINKING (IMPORTANT)
+
+Real companies deal with:
+
+Dirty text
+Inconsistent formats
+Missing structure
+
+👉 Today you’re learning:
+“Data Cleaning = 60% of Data Science”
+
+🧪 PART 5 — MINI PROJECT (MANDATORY)
+🎯 Student Data Cleaner + Analyzer
+data = {
+    "names": [" Tejas ", "RAHUL", "anita  "],
+    "marks": [80, 40, 90]
+}
+You must:
+
+✔ Clean names
+✔ Create dictionary {name: marks}
+✔ Find topper
+✔ Count pass/fail
+
+🎤 PART 6 — INTERVIEW PREP
+🔹 Q1: List vs Tuple?
+
+👉 List = mutable, Tuple = immutable
+
+🔹 Q2: What is List Comprehension?
+
+👉 Short way to create lists
+
+🔹 Q3: Why dictionary is important?
+
+👉 Fast lookup (key-value)
+
+🔥 COMMON MISTAKES
+
+❌ Using loops when comprehension is better
+❌ Ignoring string cleaning
+❌ Writing messy code
+
+✅ SUBMISSION
+
+After completing, send:
+
+Mini project code
+Answer 2 interview questions
