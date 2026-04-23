@@ -1,0 +1,118 @@
+🧠 PART 1 — THEORY (INTERVIEW LEVEL)
+🔹 What is Python?
+High-level programming language
+Easy syntax → fast development
+Used in Data Science because of libraries
+🔹 Data Types (VERY IMPORTANT)
+Type	Example	Use
+int	10	counting
+float	10.5	decimals
+str	"Tejas"	text
+bool	True	conditions
+🔹 Data Structures
+✅ List
+Ordered, mutable
+a = [1,2,3]
+✅ Tuple
+Ordered, immutable
+a = (1,2,3)
+✅ Dictionary
+Key-value pairs
+a = {"name": "Tejas", "age": 21}
+🔹 Control Flow
+If-Else
+if age > 18:
+    print("Adult")
+Loop
+for i in range(5):
+    print(i)
+🔹 Functions (VERY IMPORTANT FOR INTERVIEW)
+def add(a, b):
+    return a + b
+
+👉 Why functions?
+
+Reusability
+Clean code
+Industry standard
+💻 PART 2 — HANDS-ON CODING (MANDATORY)
+
+👉 Write yourself (don’t copy blindly)
+
+# Variables
+name = "Tejas"
+age = 21
+
+# List
+marks = [80, 90, 75, 60]
+
+# Loop
+for m in marks:
+    print(m)
+
+# Function
+def average(marks):
+    return sum(marks) / len(marks)
+
+print("Average:", average(marks))
+🧠 PART 3 — LOGIC BUILDING (CRITICAL)
+
+Solve these:
+
+✅ Q1: Find maximum
+nums = [10, 20, 5, 40]
+✅ Q2: Count even numbers
+✅ Q3: Reverse string
+"data"
+✅ Q4: Remove duplicates
+📊 PART 4 — DATA SCIENCE ENTRY (IMPORTANT)
+🔹 What is Dataset?
+Collection of data (rows & columns)
+🔹 What is DataFrame?
+Table format (like Excel)
+💻 Practice
+import pandas as pd
+
+data = {
+    "name": ["A", "B", "C"],
+    "marks": [80, 90, 70]
+}
+
+df = pd.DataFrame(data)
+
+print(df)
+print(df.head())
+🏭 PART 5 — INDUSTRY TASK (REAL THINKING)
+
+👉 Scenario:
+Company has student data → wants insights
+
+Your job:
+Calculate average
+Find topper
+Identify failed students
+🧪 PART 6 — MINI PROJECT (MANDATORY)
+🎯 Student Result Analyzer
+students = ["A", "B", "C"]
+marks = [80, 40, 90]
+You must:
+
+✔ Average
+✔ Topper
+✔ Pass/Fail
+
+🎤 PART 7 — INTERVIEW PREP
+
+Prepare answers:
+
+🔹 Q1: Why Python in Data Science?
+
+👉 Easy + libraries + fast development
+
+🔹 Q2: List vs Tuple?
+
+👉 Mutable vs Immutable
+
+🔹 Q3: What is function?
+
+👉 Reusable block of code
