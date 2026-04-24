@@ -1,0 +1,112 @@
+🧠 PART 1 — THEORY (INTERVIEW LEVEL)
+🔹 What is OOP?
+
+👉 Programming using objects & classes
+
+👉 Instead of writing:
+
+Random functions ❌
+You create:
+Structured systems ✅
+🔹 Class & Object
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+    def display(self):
+        print(self.name, self.marks)
+
+s1 = Student("Tejas", 80)
+s1.display()
+🔹 Key Concepts
+✅ 1. Encapsulation
+
+👉 Combine data + methods
+
+✅ 2. Inheritance (IMPORTANT)
+class Person:
+    def speak(self):
+        print("Speaking")
+
+class Student(Person):
+    def study(self):
+        print("Studying")
+✅ 3. Polymorphism (basic idea)
+
+👉 Same function → different behavior
+
+🧠 PART 2 — WHY OOP IN DATA SCIENCE?
+
+In industry:
+
+Data pipelines
+ML models
+APIs
+
+👉 All are built using classes
+
+Example:
+
+DataCleaner class
+ModelTrainer class
+Predictor class
+💻 PART 3 — HANDS-ON PRACTICE
+✅ Task 1: Basic Class
+class Car:
+    def __init__(self, brand):
+        self.brand = brand
+
+    def show(self):
+        print(self.brand)
+✅ Task 2: Student Class
+Store name + marks
+Method → pass/fail
+✅ Task 3: Inheritance
+Person → Student
+Add extra method
+🏭 PART 4 — INDUSTRY THINKING
+
+👉 Instead of writing:
+
+clean_data()
+train_model()
+predict()
+
+👉 You design:
+
+class DataPipeline:
+    def clean(self): ...
+    def train(self): ...
+    def predict(self): ...
+
+👉 This is how real systems are built
+
+🧪 PART 5 — MINI PROJECT (MANDATORY)
+🎯 Student Management System (OOP)
+Requirements:
+
+✔ Class: Student
+✔ Attributes: name, marks
+✔ Methods:
+
+calculate grade
+pass/fail
+Bonus (IMPORTANT):
+
+✔ Create class ClassRoom
+
+Store multiple students
+Find topper
+🎤 PART 6 — INTERVIEW PREP
+🔹 Q1: What is OOP?
+
+👉 Programming using classes & objects
+
+🔹 Q2: What is inheritance?
+
+👉 Reusing parent class
+
+🔹 Q3: Why OOP?
+
+👉 Clean, scalable, maintainable

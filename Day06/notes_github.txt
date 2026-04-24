@@ -1,0 +1,123 @@
+🧠 PART 1 — THEORY (INTERVIEW + INDUSTRY)
+🔹 What is a Branch?
+
+👉 A separate version of your code
+
+📌 Example:
+
+main → stable code
+feature → new changes
+
+👉 You don’t break main project while experimenting
+
+🔹 Why Branching is Important?
+Safe development
+Multiple developers working together
+Feature isolation
+💻 PART 2 — GIT BRANCHING COMMANDS
+🔹 Create Branch
+git branch feature1
+🔹 Switch Branch
+git checkout feature1
+
+👉 (or modern way)
+
+git switch feature1
+🔹 Create + Switch
+git checkout -b feature1
+🔹 Check Branches
+git branch
+🔹 Merge Branch
+git checkout main
+git merge feature1
+⚠️ PART 3 — .gitignore (VERY IMPORTANT)
+🔹 What is .gitignore?
+
+👉 File that tells Git what NOT to upload
+
+🔹 Example .gitignore
+__pycache__/
+*.csv
+.env
+
+👉 Why?
+
+Avoid large files
+Protect sensitive data
+Clean repo
+🧠 PART 4 — GITHUB WORKFLOW (TEAM LEVEL)
+🔹 Basic Flow:
+Create branch
+Make changes
+Commit
+Push
+Create Pull Request (PR)
+Merge
+
+👉 Even if solo → follow this habit
+
+💻 PART 5 — HANDS-ON PRACTICE
+✅ Task 1: Branching
+git checkout -b feature-cleaning
+✅ Task 2:
+Modify your Day 4 project
+Add improvement (e.g., better output)
+✅ Task 3:
+git add .
+git commit -m "Improved data cleaning"
+git push origin feature-cleaning
+✅ Task 4:
+Merge into main
+🏭 PART 6 — INDUSTRY TASK
+
+👉 Scenario:
+You are working on data cleaning feature
+
+Workflow:
+Create branch
+Develop feature
+Test
+Merge
+
+👉 This is EXACTLY how companies work
+
+🧪 PART 7 — MINI PROJECT (MANDATORY)
+🎯 Improve Your Previous Project
+
+Take Day 4 project and:
+✔ Add error handling
+✔ Improve output
+✔ Push via branch
+
+🎤 PART 8 — INTERVIEW PREP
+🔹 Q1: What is branching?
+
+👉 Separate version of code
+
+🔹 Q2: Why .gitignore?
+
+👉 Avoid unnecessary files
+
+🔹 Q3: What is pull request?
+
+👉 Request to merge code
+
+🔥 COMMON MISTAKES
+
+❌ Working directly on main
+❌ Not using branches
+❌ Uploading datasets to Git
+
+🧠 HABIT FROM TODAY
+
+👉 Always:
+
+Create branch
+Work
+Merge
+✅ SUBMISSION
+
+After completing:
+
+GitHub repo link (with branch)
+Answer 2 interview questions

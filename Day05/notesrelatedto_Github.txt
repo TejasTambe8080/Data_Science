@@ -1,0 +1,98 @@
+🧠 PART 1 — THEORY (INTERVIEW + INDUSTRY)
+🔹 What is Git?
+
+👉 A version control system
+Tracks changes in your code over time
+
+📌 Example:
+
+Day 1 → wrote basic code
+Day 5 → improved code
+👉 Git keeps history of all versions
+🔹 What is GitHub?
+
+👉 Cloud platform to store code repositories
+
+👉 Used for:
+
+Portfolio
+Team collaboration
+Code sharing
+🔹 Why Companies Care?
+Team collaboration
+Code tracking
+Rollback if something breaks
+💻 PART 2 — CORE GIT COMMANDS (MANDATORY)
+🔹 Initialize Repository
+git init
+🔹 Add Files
+git add .
+🔹 Commit Changes
+git commit -m "Initial commit"
+🔹 Check Status
+git status
+🔹 Connect to GitHub
+git remote add origin <your_repo_link>
+git push -u origin main
+⚙️ PART 3 — HANDS-ON PRACTICE
+
+👉 Use your Day 4 project
+
+Step-by-step:
+Create folder
+Open terminal
+git init
+Add files
+git add .
+Commit
+git commit -m "Day 4 project upload"
+Push to GitHub
+🧠 PART 4 — IMPORTANT CONCEPTS
+🔹 Repository
+
+👉 Folder tracked by Git
+
+🔹 Commit
+
+👉 Snapshot of code
+
+🔹 Branch (Intro)
+
+👉 Separate version of code
+
+🏭 PART 5 — INDUSTRY WORKFLOW
+
+Real company flow:
+
+Write code
+Commit changes
+Push to GitHub
+Team reviews code
+
+👉 You MUST:
+
+Push code every 2 days
+🧪 PART 6 — MINI TASK (MANDATORY)
+🎯 Push Your Work
+
+Upload:
+
+Day 1 project
+Day 2 project
+Day 3 project
+Day 4 project
+
+👉 On GitHub
+
+🎤 PART 7 — INTERVIEW PREP
+🔹 Q1: What is Git?
+
+👉 Version control system
+
+🔹 Q2: What is commit?
+
+👉 Snapshot of changes
+
+🔹 Q3: Why GitHub?
+
+👉 Collaboration + hosting
