@@ -1,0 +1,118 @@
+🧠 PART 1 — FUNCTIONS (DEEP + INTERVIEW LEVEL)
+🔹 What is a Function?
+
+👉 Reusable block of code
+
+def add(a, b):
+    return a + b
+🔹 Types of Functions
+# Default argument
+def greet(name="User"):
+    return "Hello " + name
+
+# Keyword arguments
+greet(name="Tejas")
+🔹 Why Functions Matter (Industry)
+Reusability
+Clean code
+Easier debugging
+Used in pipelines
+⚡ PART 2 — LAMBDA FUNCTIONS (IMPORTANT)
+square = lambda x: x * x
+print(square(5))
+
+👉 Used for:
+
+Short operations
+Inline transformations
+⚡ PART 3 — MAP & FILTER (INTERVIEW FAVORITE)
+🔹 map()
+nums = [1,2,3,4]
+
+squares = list(map(lambda x: x*x, nums))
+print(squares)
+🔹 filter()
+nums = [10, 15, 20, 25]
+
+evens = list(filter(lambda x: x % 2 == 0, nums))
+print(evens)
+🔹 Industry Use
+Data transformation
+Preprocessing pipelines
+⚠️ PART 4 — EXCEPTION HANDLING (VERY IMPORTANT)
+
+👉 Real systems NEVER crash
+
+try:
+    x = int("abc")
+except ValueError:
+    print("Invalid input")
+🔹 Multiple Exceptions
+try:
+    a = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+🔹 Finally Block
+finally:
+    print("Execution done")
+🏗️ PART 5 — MODULAR CODE (INDUSTRY LEVEL)
+
+👉 Don’t write everything in one file
+
+Example:
+file: utils.py
+def clean_text(text):
+    return text.strip().lower()
+file: main.py
+from utils import clean_text
+
+print(clean_text(" Data "))
+🔹 Why modular?
+Scalable projects
+Team collaboration
+Clean architecture
+💻 PART 6 — HANDS-ON PRACTICE
+✅ Task 1: Lambda
+# cube of numbers
+nums = [1,2,3]
+✅ Task 2: map
+# convert list to squares
+✅ Task 3: filter
+# filter numbers > 50
+✅ Task 4: Exception
+# handle division safely
+🏭 PART 7 — INDUSTRY TASK
+
+👉 Scenario:
+User inputs data → may be wrong
+
+Your job:
+Convert input safely
+Handle errors
+Process data
+🧪 PART 8 — MINI PROJECT (MANDATORY)
+🎯 Smart Data Processor
+Input:
+data = ["10", "20", "abc", "40"]
+You must:
+
+✔ Convert to integers
+✔ Skip invalid values
+✔ Square numbers using map
+✔ Filter values > 500
+
+Expected Output:
+[1600]
+🎤 PART 9 — INTERVIEW PREP
+🔹 Q1: What is lambda?
+
+👉 Anonymous function
+
+🔹 Q2: map vs filter?
+
+👉 map → transform
+👉 filter → select
+
+🔹 Q3: Why exception handling?
+
+👉 Prevent crashes

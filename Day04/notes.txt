@@ -1,0 +1,128 @@
+🧠 PART 1 — THEORY (INTERVIEW LEVEL)
+🔹 What is File Handling?
+
+👉 Reading/writing data from files (CSV, TXT, JSON)
+
+👉 In industry:
+
+Data comes from files, APIs, databases
+First step = load data correctly
+🔹 File Modes
+Mode	Meaning
+"r"	Read
+"w"	Write (overwrite)
+"a"	Append
+🔹 Basic File Read
+f = open("data.txt", "r")
+print(f.read())
+f.close()
+🔹 Best Practice (IMPORTANT)
+with open("data.txt", "r") as f:
+    data = f.read()
+
+👉 Why with?
+
+Automatically closes file
+Prevents memory issues
+💻 PART 2 — TEXT FILE HANDLING
+Write file
+with open("sample.txt", "w") as f:
+    f.write("Hello Data Science")
+Read line-by-line
+with open("sample.txt", "r") as f:
+    for line in f:
+        print(line.strip())
+📊 PART 3 — CSV HANDLING (IMPORTANT)
+🔹 Using Python (basic)
+import csv
+
+with open("data.csv", "r") as f:
+    reader = csv.reader(f)
+    for row in reader:
+        print(row)
+🔹 Using Pandas (INDUSTRY WAY)
+import pandas as pd
+
+df = pd.read_csv("data.csv")
+
+print(df.head())
+
+👉 This is what companies use.
+
+⚠️ PART 4 — ERROR HANDLING WITH FILES
+try:
+    with open("data.csv", "r") as f:
+        print(f.read())
+except FileNotFoundError:
+    print("File not found")
+🏭 PART 5 — INDUSTRY THINKING
+
+Real workflow:
+
+Data comes in CSV
+You load it
+You clean it
+Then analyze
+
+👉 Today = Data Ingestion Stage
+
+💻 PART 6 — HANDS-ON PRACTICE
+✅ Task 1
+Create file numbers.txt
+Write numbers: 10, 20, 30
+✅ Task 2
+Read file and calculate sum
+✅ Task 3
+Create CSV manually:
+name,marks
+A,80
+B,90
+C,70
+Load using Pandas
+✅ Task 4
+Print only students with marks > 75
+🧪 PART 7 — MINI PROJECT (MANDATORY)
+🎯 Student File Analyzer
+Step 1: Create CSV
+name,marks
+Tejas,80
+Rahul,40
+Anita,90
+Step 2: Your Task
+
+✔ Load CSV using Pandas
+✔ Calculate average
+✔ Find topper
+✔ Count pass/fail
+
+Expected Output:
+Average: 70
+Topper: Anita
+Pass: 2
+Fail: 1
+🎤 PART 8 — INTERVIEW PREP
+🔹 Q1: What is file handling?
+
+👉 Reading/writing data from files
+
+🔹 Q2: Why use Pandas instead of CSV module?
+
+👉 Faster, easier, powerful
+
+🔹 Q3: What is data ingestion?
+
+👉 Loading data into system
+
+🔥 COMMON MISTAKES
+
+❌ Not using with open()
+❌ Hardcoding paths incorrectly
+❌ Ignoring file errors
+
+✅ SUBMISSION
+
+After completing:
+
+Mini project code
+Answer 2 interview questions
+🚀 NEXT STEP
