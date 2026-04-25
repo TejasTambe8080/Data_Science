@@ -1,0 +1,106 @@
+🧠 PART 1 — THEORY (INTERVIEW LEVEL)
+🔹 What is Datetime?
+
+👉 Represents date + time (YYYY-MM-DD HH:MM:SS)
+
+👉 Used in:
+
+Sales analysis
+User activity tracking
+Logs
+🔹 Why Important in Data Science?
+Trend analysis
+Time-based features
+Forecasting
+💻 PART 2 — PYTHON DATETIME MODULE
+from datetime import datetime
+
+now = datetime.now()
+print(now)
+🔹 Convert String → Date
+date = datetime.strptime("2026-04-25", "%Y-%m-%d")
+print(date)
+🔹 Extract Components
+print(date.year)
+print(date.month)
+print(date.day)
+📊 PART 3 — PANDAS DATETIME (INDUSTRY WAY)
+import pandas as pd
+
+data = {
+    "date": ["2024-01-01", "2024-02-15"]
+}
+
+df = pd.DataFrame(data)
+
+df["date"] = pd.to_datetime(df["date"])
+
+print(df["date"].dt.year)
+print(df["date"].dt.month)
+🔹 Add New Features
+df["day"] = df["date"].dt.day
+df["weekday"] = df["date"].dt.day_name()
+💻 PART 4 — HANDS-ON PRACTICE
+✅ Task 1: Convert to datetime
+dates = ["2024-01-01", "2024-02-10"]
+✅ Task 2: Extract year, month
+✅ Task 3: Find weekday
+✅ Task 4: Filter data after a date
+🏭 PART 5 — INDUSTRY TASK
+
+👉 Scenario:
+Company has sales data with dates
+
+data = {
+    "date": ["2024-01-01", "2024-01-02", "2024-02-01"],
+    "sales": [100, 200, 300]
+}
+Your job:
+
+✔ Convert date
+✔ Find monthly sales
+✔ Identify peak day
+
+📊 PART 6 — TIME-BASED THINKING
+
+👉 Real questions companies ask:
+
+Which month has highest sales?
+Which day has most users?
+Weekend vs weekday behavior?
+🧪 PART 7 — MINI PROJECT (MANDATORY)
+🎯 Sales Time Analyzer
+Input:
+data = {
+    "date": ["2024-01-01", "2024-01-05", "2024-02-01"],
+    "sales": [100, 200, 300]
+}
+You must:
+
+✔ Convert to datetime
+✔ Extract month
+✔ Calculate total sales per month
+✔ Find highest sales day
+
+Expected Output:
+Jan: 300
+Feb: 300
+Top Day: 2024-02-01
+🎤 PART 8 — INTERVIEW PREP
+🔹 Q1: Why datetime is important?
+
+👉 Time-based analysis
+
+🔹 Q2: What is strptime?
+
+👉 String → datetime conversion
+
+🔹 Q3: Why use Pandas datetime?
+
+👉 Easy feature extraction
+
+🔥 COMMON MISTAKES
+
+❌ Treating date as string
+❌ Not converting before analysis
+❌ Ignoring time features
