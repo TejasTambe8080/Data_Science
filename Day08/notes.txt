@@ -1,0 +1,126 @@
+🧠 PART 1 — THEORY (INTERVIEW LEVEL)
+🔹 What is Regex?
+
+👉 Pattern matching tool for text
+
+👉 Example:
+
+Extract emails
+Find phone numbers
+Clean unwanted text
+🔹 Why Important in Data Science?
+Data cleaning (logs, reviews, chat data)
+NLP preprocessing
+Feature extraction
+🧠 PART 2 — BASIC REGEX PATTERNS
+Pattern	Meaning	Example
+\d	Digit	123
+\w	Word	abc
+.	Any char	a,1,@
++	One or more	aaaa
+*	Zero or more	optional
+^	Start	start match
+$	End	end match
+💻 PART 3 — USING REGEX IN PYTHON
+import re
+
+text = "My number is 9876543210"
+
+nums = re.findall(r"\d+", text)
+print(nums)
+🔹 Extract Emails
+text = "Contact: test@gmail.com"
+
+emails = re.findall(r"\S+@\S+", text)
+print(emails)
+🔹 Replace Text
+text = "Hello 123"
+
+clean = re.sub(r"\d+", "", text)
+print(clean)
+💻 PART 4 — HANDS-ON PRACTICE
+✅ Task 1: Extract Numbers
+text = "Price is 500 and discount is 20"
+✅ Task 2: Extract Emails
+text = "a@gmail.com b@yahoo.com"
+✅ Task 3: Remove Special Characters
+text = "Hello@#World!!"
+✅ Task 4: Clean Spaces
+text = "  Data   Science  "
+🏭 PART 5 — INDUSTRY TASK
+
+👉 Scenario:
+You receive messy user data:
+
+data = [
+    "  Tejas123@gmail.com ",
+    "RAHUL@@test.com",
+    "anita#mail.com"
+]
+Your job:
+
+✔ Clean spaces
+✔ Extract valid emails
+✔ Remove invalid ones
+
+📊 PART 6 — TEXT CLEANING PIPELINE (IMPORTANT)
+
+Real workflow:
+
+Lowercase text
+Remove spaces
+Remove special characters
+Extract useful info
+
+👉 You’ll use this in:
+
+NLP
+Data preprocessing
+ML pipelines
+🧪 PART 7 — MINI PROJECT (MANDATORY)
+🎯 Email Cleaner & Extractor
+Input:
+data = [
+    "  test123@gmail.com ",
+    "invalid.com",
+    "hello@yahoo.com"
+]
+You must:
+
+✔ Clean text
+✔ Extract valid emails
+✔ Output clean list
+
+Expected Output:
+["test123@gmail.com", "hello@yahoo.com"]
+🎤 PART 8 — INTERVIEW PREP
+🔹 Q1: What is regex?
+
+👉 Pattern matching tool
+
+🔹 Q2: Why used?
+
+👉 Text cleaning & extraction
+
+🔹 Q3: Difference between + and *?
+
+👉 + = 1+ times
+👉 * = 0+ times
+
+🔥 COMMON MISTAKES
+
+❌ Writing wrong patterns
+❌ Not testing regex
+❌ Ignoring edge cases
+
+🧠 INDUSTRY INSIGHT
+
+👉 70% of real data is messy text
+👉 Regex = your cleaning weapon
+
+✅ SUBMISSION
+
+After completing:
+
+Mini project code
+Answer 2 interview questions
