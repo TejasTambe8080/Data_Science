@@ -1,0 +1,139 @@
+🧠 PART 1 — THEORY (INTERVIEW LEVEL)
+🔹 What is Data Cleaning?
+
+👉 Process of fixing messy data
+
+🔹 Why Important?
+Real data is never clean
+ML models fail with dirty data
+60–70% time spent here
+🧹 PART 2 — DATA CLEANING TECHNIQUES
+🔹 1. Handle Missing Values
+df.isnull()
+df.dropna()
+df.fillna(0)
+🔹 2. Remove Duplicates
+df.drop_duplicates()
+🔹 3. Rename Columns
+df.rename(columns={"old": "new"}, inplace=True)
+🔹 4. Change Data Type
+df["marks"] = df["marks"].astype(int)
+🔹 5. String Cleaning
+df["name"] = df["name"].str.strip().str.lower()
+📊 PART 3 — GROUPBY (VERY IMPORTANT)
+🔹 What is groupby()?
+
+👉 Group data by category
+
+Example:
+df.groupby("department")["salary"].mean()
+
+👉 Used in:
+
+Business analytics
+Reports
+Dashboards
+📊 PART 4 — AGGREGATION
+🔹 Functions:
+df["marks"].mean()
+df["marks"].sum()
+df["marks"].max()
+df["marks"].min()
+🔹 Multiple Aggregations
+df.groupby("dept")["salary"].agg(["mean", "max", "min"])
+💻 PART 5 — HANDS-ON PRACTICE
+✅ Task 1: Clean Data
+data = {
+    "name": [" A ", "B", "C", "C"],
+    "marks": [80, None, 70, 70]
+}
+
+✔ Remove spaces
+✔ Fill missing values
+✔ Remove duplicates
+
+✅ Task 2: GroupBy
+data = {
+    "dept": ["IT", "HR", "IT", "HR"],
+    "salary": [50000, 40000, 60000, 45000]
+}
+
+✔ Find average salary per dept
+
+🏭 PART 6 — INDUSTRY TASK
+
+👉 Scenario:
+Company dataset:
+
+data = {
+    "department": ["IT", "IT", "HR", "HR"],
+    "salary": [50000, None, 40000, 45000]
+}
+Your job:
+
+✔ Clean missing values
+✔ Find avg salary per department
+✔ Find highest paid department
+
+📊 PART 7 — DATA ANALYST THINKING
+
+Companies ask:
+
+Which department pays highest?
+What is average performance?
+Where is missing data?
+
+👉 Today = real analytics mindset
+
+🧪 PART 8 — MINI PROJECT (MANDATORY)
+🎯 Employee Data Analyzer
+Input:
+data = {
+    "name": ["A", "B", "C", "C"],
+    "dept": ["IT", "HR", "IT", "IT"],
+    "salary": [50000, None, 60000, 60000]
+}
+You must:
+
+✔ Clean data
+✔ Fill missing salary
+✔ Remove duplicates
+✔ Group by dept
+✔ Find avg salary
+✔ Find highest salary dept
+
+Expected Output:
+IT Avg: 55000
+HR Avg: 40000
+Top Dept: IT
+🎤 PART 9 — INTERVIEW PREP
+🔹 Q1: What is data cleaning?
+
+👉 Fixing missing, duplicate, incorrect data
+
+🔹 Q2: What is groupby?
+
+👉 Group data for analysis
+
+🔹 Q3: Why aggregation?
+
+👉 Summarize data
+
+🔥 COMMON MISTAKES
+
+❌ Dropping data blindly
+❌ Ignoring missing values
+❌ Wrong grouping logic
+
+🧠 INDUSTRY INSIGHT
+
+👉 If you master this:
+
+You can clear data analyst interviews
+You can handle real datasets
+✅ SUBMISSION
+
+After completing:
+
+Mini project code
+Answer 2 interview questions
