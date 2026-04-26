@@ -1,0 +1,126 @@
+🧠 PART 1 — THEORY (INTERVIEW LEVEL)
+🔹 What is NumPy?
+
+👉 Library for fast numerical operations
+
+🔹 Why NumPy?
+Faster than Python lists
+Supports vector operations
+Used in ML libraries
+🔹 List vs NumPy Array
+Feature	List	NumPy Array
+Speed	Slow	Fast
+Math Ops	Limited	Powerful
+Use	General	Data Science
+💻 PART 2 — NUMPY BASICS
+import numpy as np
+
+arr = np.array([1, 2, 3, 4])
+print(arr)
+🔹 Create Arrays
+np.zeros(5)
+np.ones(5)
+np.arange(1, 10)
+🔹 Indexing & Slicing
+arr = np.array([10, 20, 30, 40])
+
+print(arr[1])
+print(arr[1:3])
+⚡ PART 3 — VECTOR OPERATIONS (VERY IMPORTANT)
+arr = np.array([1, 2, 3])
+
+print(arr + 5)
+print(arr * 2)
+
+👉 No loops needed → faster
+
+🔹 Math Functions
+np.mean(arr)
+np.sum(arr)
+np.max(arr)
+np.min(arr)
+📊 PART 4 — 2D ARRAYS (IMPORTANT)
+arr = np.array([[1,2,3], [4,5,6]])
+
+print(arr.shape)
+print(arr[0][1])
+💻 PART 5 — HANDS-ON PRACTICE
+✅ Task 1: Create array
+[10, 20, 30, 40]
+✅ Task 2: Multiply all elements by 2
+✅ Task 3: Find mean
+✅ Task 4: Create 2D array and access elements
+🏭 PART 6 — INDUSTRY TASK
+
+👉 Scenario:
+Company has sales numbers
+
+sales = [100, 200, 300, 400]
+Your job:
+
+✔ Convert to NumPy array
+✔ Increase all values by 10%
+✔ Find total + average
+
+📊 PART 7 — WHY VECTORISATION MATTERS
+
+👉 Instead of:
+
+for i in arr:
+    i = i + 5
+
+👉 Use:
+
+arr + 5
+
+✔ Faster
+✔ Cleaner
+✔ Used in ML
+
+🧪 PART 8 — MINI PROJECT (MANDATORY)
+🎯 Sales Data Processor
+Input:
+sales = [100, 200, 300, 400]
+You must:
+
+✔ Convert to NumPy
+✔ Increase by 10%
+✔ Find:
+
+Total sales
+Average sales
+Max sales
+Expected Output:
+Total: 1100
+Average: 275
+Max: 440
+🎤 PART 9 — INTERVIEW PREP
+🔹 Q1: Why NumPy over list?
+
+👉 Faster + vector operations
+
+🔹 Q2: What is vectorization?
+
+👉 Operations without loops
+
+🔹 Q3: What is shape?
+
+👉 Dimensions of array
+
+🔥 COMMON MISTAKES
+
+❌ Using loops instead of vectorization
+❌ Not understanding array shape
+❌ Mixing list and array incorrectly
+
+🧠 INDUSTRY INSIGHT
+
+👉 All ML models use NumPy internally
+👉 This is your math engine
+
+✅ SUBMISSION
+
+After completing:
+
+Mini project code
+Answer 2 interview questions

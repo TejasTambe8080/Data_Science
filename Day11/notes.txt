@@ -1,0 +1,125 @@
+min
+🧠 PART 1 — THEORY (INTERVIEW LEVEL)
+🔹 What is Pandas?
+
+👉 Library used for data manipulation & analysis
+
+🔹 Key Structures
+✅ Series
+
+👉 1D data
+
+a = pd.Series([10, 20, 30])
+✅ DataFrame
+
+👉 Table (rows + columns)
+
+data = {
+    "name": ["A", "B"],
+    "marks": [80, 90]
+}
+df = pd.DataFrame(data)
+🔹 Why Pandas?
+Handles large datasets
+Easy filtering & transformation
+Industry standard
+💻 PART 2 — BASIC OPERATIONS
+import pandas as pd
+
+df = pd.read_csv("data.csv")
+🔹 View Data
+df.head()
+df.tail()
+df.info()
+df.describe()
+🔹 Select Columns
+df["marks"]
+df[["name", "marks"]]
+🔹 Filter Rows
+df[df["marks"] > 80]
+📊 PART 3 — HANDS-ON PRACTICE
+✅ Task 1: Create DataFrame
+data = {
+    "name": ["A", "B", "C"],
+    "marks": [80, 90, 70]
+}
+✅ Task 2:
+Print first 2 rows
+✅ Task 3:
+Filter students with marks > 75
+✅ Task 4:
+Find average marks
+🏭 PART 4 — INDUSTRY TASK
+
+👉 Scenario:
+Company has employee dataset
+
+data = {
+    "name": ["A", "B", "C"],
+    "salary": [30000, 50000, 40000]
+}
+Your job:
+
+✔ Find average salary
+✔ Find highest salary
+✔ Filter salary > 40k
+
+📊 PART 5 — DATA ANALYSIS THINKING
+
+Real questions:
+
+Who is top performer?
+What is average?
+Which group is highest?
+
+👉 Today = foundation of EDA (Exploratory Data Analysis)
+
+🧪 PART 6 — MINI PROJECT (MANDATORY)
+🎯 Student Data Analyzer
+Input:
+data = {
+    "name": ["Tejas", "Rahul", "Anita"],
+    "marks": [80, 40, 90]
+}
+You must:
+
+✔ Convert to DataFrame
+✔ Show top 2 rows
+✔ Find average
+✔ Find topper
+✔ Filter pass students
+
+Expected Output:
+Average: 70
+Topper: Anita
+Pass Students: Tejas, Anita
+🎤 PART 7 — INTERVIEW PREP
+🔹 Q1: What is DataFrame?
+
+👉 Table-like structure
+
+🔹 Q2: Series vs DataFrame?
+
+👉 1D vs 2D
+
+🔹 Q3: Why Pandas?
+
+👉 Easy data handling
+
+🔥 COMMON MISTAKES
+
+❌ Not understanding indexing
+❌ Confusing Series vs DataFrame
+❌ Not practicing filtering
+
+🧠 INDUSTRY INSIGHT
+
+👉 70% of data science work = Pandas
+👉 Every company uses it
+
+✅ SUBMISSION
+
+After completing:
+
+Mini project code
+Answer 2 interview questions
