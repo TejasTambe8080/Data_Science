@@ -1,0 +1,136 @@
+🧠 PART 1 — THEORY (INTERVIEW LEVEL)
+🔹 What is Seaborn?
+
+👉 Built on top of Matplotlib
+👉 Designed for statistical visualization
+
+🔹 Why Seaborn?
+Better design
+Less code
+Built-in statistical plots
+📊 PART 2 — IMPORTANT PLOTS (MUST KNOW)
+🔹 1. Histogram + KDE (Distribution)
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+data = [10,20,20,30,30,30]
+
+sns.histplot(data, kde=True)
+plt.show()
+
+👉 Shows:
+
+Distribution
+Density
+🔹 2. Box Plot (Outliers Detection)
+sns.boxplot(x=data)
+plt.show()
+
+👉 Used for:
+
+Finding outliers
+🔹 3. Count Plot (Category Count)
+dept = ["IT", "HR", "IT", "HR", "IT"]
+
+sns.countplot(x=dept)
+plt.show()
+🔹 4. Heatmap (VERY IMPORTANT)
+import pandas as pd
+
+df = pd.DataFrame({
+    "a": [1,2,3],
+    "b": [4,5,6]
+})
+
+sns.heatmap(df.corr(), annot=True)
+plt.show()
+
+👉 Shows:
+
+Correlation between variables
+🔹 5. Scatter Plot (Relationship)
+x = [1,2,3]
+y = [10,20,30]
+
+sns.scatterplot(x=x, y=y)
+plt.show()
+💻 PART 3 — HANDS-ON PRACTICE
+Dataset:
+data = {
+    "dept": ["IT", "HR", "IT", "HR", "IT"],
+    "salary": [50000, 40000, 60000, 45000, 70000]
+}
+✅ Tasks:
+
+✔ Histogram → salary distribution
+✔ Boxplot → detect outliers
+✔ Countplot → dept count
+✔ Heatmap → correlation
+
+🏭 PART 4 — INDUSTRY TASK
+
+👉 Scenario:
+You analyze employee dataset
+
+Your job:
+
+✔ Detect salary distribution
+✔ Identify outliers
+✔ Check relationship between features
+
+📊 PART 5 — STATISTICAL THINKING
+
+Seaborn helps you answer:
+
+Is data normal?
+Are there outliers?
+Are variables related?
+
+👉 This is used before ML
+
+🧪 PART 6 — MINI PROJECT (MANDATORY)
+🎯 Employee Insight Dashboard (Seaborn)
+Input:
+data = {
+    "dept": ["IT", "HR", "IT", "HR", "IT"],
+    "salary": [50000, 40000, 60000, 45000, 70000]
+}
+You must:
+
+✔ Histogram + KDE
+✔ Boxplot
+✔ Countplot
+✔ Heatmap
+
+Output:
+
+👉 4 charts + insights
+
+🎤 PART 7 — INTERVIEW PREP
+🔹 Q1: Why Seaborn over Matplotlib?
+
+👉 Better visualization + statistical plots
+
+🔹 Q2: What is heatmap?
+
+👉 Shows correlation
+
+🔹 Q3: What is boxplot?
+
+👉 Detects outliers
+
+🔥 COMMON MISTAKES
+
+❌ Using wrong plot
+❌ Ignoring interpretation
+❌ Not labeling charts
+
+🧠 INDUSTRY INSIGHT
+
+👉 Seaborn is used in:
+
+Data analysis
+ML preprocessing
+Reporting
+
+👉 Good visuals = strong impression in interviews

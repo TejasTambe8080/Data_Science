@@ -1,0 +1,129 @@
+🧠 PART 1 — THEORY (INTERVIEW LEVEL)
+🔹 What is EDA?
+
+👉 Process of understanding data before modeling
+
+🔹 Why EDA is IMPORTANT?
+Find patterns
+Detect errors
+Understand relationships
+Prepare for ML
+🔹 Real Industry Flow:
+Load data
+Clean data
+Explore data (EDA)
+Build model
+
+👉 Today = Step 3
+
+🧠 PART 2 — EDA CHECKLIST (VERY IMPORTANT)
+
+Whenever you see a dataset, ask:
+
+✅ Basic Info
+How many rows & columns?
+What are data types?
+df.shape
+df.info()
+✅ Statistical Summary
+df.describe()
+✅ Missing Values
+df.isnull().sum()
+✅ Unique Values
+df["column"].nunique()
+df["column"].value_counts()
+✅ Relationships
+df.groupby("category")["value"].mean()
+💻 PART 3 — HANDS-ON PRACTICE
+Dataset:
+data = {
+    "name": ["A", "B", "C", "D"],
+    "dept": ["IT", "HR", "IT", "HR"],
+    "salary": [50000, 40000, 60000, 45000]
+}
+✅ Tasks:
+
+✔ Check shape
+✔ Check data types
+✔ Find average salary
+✔ Find department-wise salary
+✔ Count employees per dept
+
+🏭 PART 4 — INDUSTRY TASK (IMPORTANT)
+
+👉 Scenario:
+Company gives dataset → asks insights
+
+Your job:
+
+✔ Identify top department
+✔ Find average salary
+✔ Spot imbalance
+
+📊 PART 5 — THINK LIKE ANALYST
+
+Instead of just coding:
+
+❌ Wrong:
+
+Print data
+
+✅ Correct:
+
+“IT department has higher salary than HR”
+“Most employees are in IT”
+
+👉 Always convert data → insights
+
+🧪 PART 6 — MINI PROJECT (MANDATORY)
+🎯 Employee Insights Generator
+Input:
+data = {
+    "name": ["A", "B", "C", "D", "E"],
+    "dept": ["IT", "HR", "IT", "HR", "IT"],
+    "salary": [50000, 40000, 60000, 45000, 70000]
+}
+You must:
+
+✔ Basic info (rows, columns)
+✔ Avg salary
+✔ Dept-wise salary
+✔ Highest paid employee
+✔ Most common dept
+
+Output (Example):
+Total Employees: 5
+Average Salary: 53000
+Top Dept: IT
+Highest Paid: E
+🎤 PART 7 — INTERVIEW PREP
+🔹 Q1: What is EDA?
+
+👉 Understanding data before modeling
+
+🔹 Q2: Why EDA?
+
+👉 Detect patterns & issues
+
+🔹 Q3: What steps in EDA?
+
+👉 Summary, missing values, relationships
+
+🔥 COMMON MISTAKES
+
+❌ Jumping to ML without EDA
+❌ Ignoring missing values
+❌ Not interpreting results
+
+🧠 INDUSTRY INSIGHT
+
+👉 Good EDA = better model
+👉 Many companies hire analysts just for EDA
+
+✅ SUBMISSION
+
+After completing:
+
+Mini project code
+2–3 insights written in words
+🚀 NEXT STEP
