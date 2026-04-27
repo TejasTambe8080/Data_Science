@@ -1,0 +1,127 @@
+🧠 PART 1 — THEORY (INTERVIEW LEVEL)
+🔹 What is Pivot Table?
+
+👉 Summarizes data across categories
+
+📌 Example:
+
+Avg salary per department
+Total sales per region
+🔹 Why Important?
+Used in dashboards
+Used in business reports
+Very common interview question
+💻 PART 2 — PIVOT TABLE (CORE)
+import pandas as pd
+
+data = {
+    "dept": ["IT", "HR", "IT", "HR"],
+    "salary": [50000, 40000, 60000, 45000]
+}
+
+df = pd.DataFrame(data)
+
+pivot = pd.pivot_table(df, values="salary", index="dept", aggfunc="mean")
+
+print(pivot)
+🔹 Multiple Aggregations
+pd.pivot_table(df, values="salary", index="dept", aggfunc=["mean", "max", "min"])
+📊 PART 3 — MULTI-LEVEL GROUPING
+data = {
+    "dept": ["IT", "IT", "HR", "HR"],
+    "role": ["Dev", "Manager", "Dev", "Manager"],
+    "salary": [50000, 80000, 40000, 70000]
+}
+
+df = pd.DataFrame(data)
+
+df.groupby(["dept", "role"])["salary"].mean()
+
+👉 Used in:
+
+Deep analysis
+Hierarchical data
+💻 PART 4 — HANDS-ON PRACTICE
+Dataset:
+data = {
+    "dept": ["IT", "IT", "HR", "HR", "IT"],
+    "role": ["Dev", "Manager", "Dev", "Manager", "Dev"],
+    "salary": [50000, 80000, 40000, 70000, 60000]
+}
+✅ Tasks:
+
+✔ Pivot → avg salary per dept
+✔ Pivot → max salary per dept
+✔ Group by dept + role
+✔ Find highest paid role
+
+🏭 PART 5 — INDUSTRY TASK
+
+👉 Scenario:
+Company wants report:
+
+Avg salary per department
+Salary per role
+Top performing department
+Your job:
+
+✔ Create pivot tables
+✔ Generate summary
+
+📊 PART 6 — BUSINESS THINKING
+
+Questions companies ask:
+
+Which department pays more?
+Which role is highest paid?
+Where is cost highest?
+
+👉 Pivot = decision-making tool
+
+🧪 PART 7 — MINI PROJECT (MANDATORY)
+🎯 Company Salary Dashboard
+Input:
+data = {
+    "dept": ["IT", "IT", "HR", "HR", "IT"],
+    "role": ["Dev", "Manager", "Dev", "Manager", "Dev"],
+    "salary": [50000, 80000, 40000, 70000, 60000]
+}
+You must:
+
+✔ Pivot → avg salary per dept
+✔ Pivot → max salary per dept
+✔ Group → dept + role
+✔ Identify highest paid role
+
+Expected Output:
+IT Avg: 63333
+HR Avg: 55000
+Top Role: Manager
+🎤 PART 8 — INTERVIEW PREP
+🔹 Q1: What is pivot table?
+
+👉 Summarizes data
+
+🔹 Q2: Pivot vs GroupBy?
+
+👉 Pivot = table format
+👉 GroupBy = flexible aggregation
+
+🔹 Q3: Why used?
+
+👉 Business reporting
+
+🔥 COMMON MISTAKES
+
+❌ Confusing pivot and groupby
+❌ Not understanding aggregation
+❌ Ignoring multi-level grouping
+
+🧠 INDUSTRY INSIGHT
+
+👉 Analysts spend most time:
+
+Creating reports
+Summarizing data
+
+👉 Pivot tables = daily tool
