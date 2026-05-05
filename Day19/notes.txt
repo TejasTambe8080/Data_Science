@@ -1,0 +1,132 @@
+🧠 PART 1 — THEORY (INTERVIEW LEVEL)
+🔹 What is Correlation?
+
+👉 Measures relationship between two variables
+
+🔹 Correlation Values
+Value	Meaning
++1	Strong positive
+0	No relation
+-1	Strong negative
+🔹 Example:
+Salary ↑ → Experience ↑ → positive correlation
+Price ↑ → Demand ↓ → negative correlation
+⚠️ IMPORTANT CONCEPT
+🔹 Correlation ≠ Causation
+
+👉 Just because two variables are related
+❌ doesn’t mean one causes the other
+
+💻 PART 2 — CALCULATE CORRELATION
+df.corr()
+🔹 Specific Column
+df["salary"].corr(df["experience"])
+📊 PART 3 — HEATMAP (VISUAL CORRELATION)
+9
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+sns.heatmap(df.corr(), annot=True)
+plt.show()
+
+👉 This is VERY IMPORTANT in interviews
+
+💻 PART 4 — HANDS-ON PRACTICE
+Dataset:
+data = {
+    "experience": [1,2,3,4,5],
+    "salary": [20000,30000,40000,50000,60000],
+    "age": [22,25,28,30,35]
+}
+✅ Tasks:
+
+✔ Calculate correlation matrix
+✔ Find strongest relationship
+✔ Plot heatmap
+
+🏭 PART 5 — INDUSTRY TASK
+
+👉 Scenario:
+Company wants to build salary prediction model
+
+Your job:
+
+✔ Identify which features affect salary
+✔ Remove weak features
+✔ Detect redundant features
+
+📊 PART 6 — FEATURE RELATIONSHIP THINKING
+
+Ask:
+
+Which feature impacts target?
+Which features are redundant?
+Should we remove any?
+⚠️ MULTICOLLINEARITY (IMPORTANT)
+
+👉 When features are highly correlated with each other
+
+Example:
+
+Experience & Age
+
+👉 Problem:
+
+Confuses ML models
+💻 Check it
+df.corr()
+
+👉 If correlation > 0.8 → be careful
+
+🧪 PART 7 — MINI PROJECT (MANDATORY)
+🎯 Salary Relationship Analyzer
+Input:
+data = {
+    "experience": [1,2,3,4,5],
+    "salary": [20000,30000,40000,50000,60000],
+    "age": [22,25,28,30,35]
+}
+You must:
+
+✔ Compute correlation
+✔ Plot heatmap
+✔ Identify:
+
+strongest relation
+redundant features
+Expected Output:
+
+👉 Insights like:
+
+Salary strongly depends on experience
+Age and experience are correlated
+🎤 PART 8 — INTERVIEW PREP
+🔹 Q1: What is correlation?
+
+👉 Relationship between variables
+
+🔹 Q2: Correlation vs causation?
+
+👉 Relation ≠ cause
+
+🔹 Q3: What is multicollinearity?
+
+👉 Features highly correlated
+
+🔥 COMMON MISTAKES
+
+❌ Assuming causation
+❌ Ignoring multicollinearity
+❌ Not visualizing data
+
+🧠 INDUSTRY INSIGHT
+
+👉 Feature selection starts here
+👉 Good correlation analysis = better ML model
+
+✅ SUBMISSION
+
+After completing:
+
+Mini project code
+2 insights
