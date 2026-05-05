@@ -1,0 +1,137 @@
+🧠 PART 1 — THEORY (INTERVIEW LEVEL)
+🔹 What is Interactive Visualization?
+
+👉 Charts where user can:
+
+Hover
+Zoom
+Filter
+🔹 Why Important?
+Used in dashboards
+Used in business tools
+Better decision-making
+🔹 Tool for Today:
+Plotly
+📊 PART 2 — BASIC PLOTLY CHARTS
+🔹 Install (if needed)
+pip install plotly
+🔹 Line Chart
+import plotly.express as px
+
+x = [1,2,3]
+y = [10,20,30]
+
+fig = px.line(x=x, y=y)
+fig.show()
+🔹 Bar Chart
+names = ["IT", "HR"]
+values = [60000, 40000]
+
+fig = px.bar(x=names, y=values)
+fig.show()
+🔹 Scatter Plot
+fig = px.scatter(x=[1,2,3], y=[10,20,30])
+fig.show()
+💻 PART 3 — USING DATAFRAME
+import pandas as pd
+
+df = pd.DataFrame({
+    "dept": ["IT", "HR", "IT"],
+    "salary": [50000, 40000, 60000]
+})
+
+fig = px.bar(df, x="dept", y="salary")
+fig.show()
+🧠 PART 4 — DASHBOARD THINKING (IMPORTANT)
+
+👉 Instead of one chart → combine multiple insights:
+
+Example:
+
+Salary distribution
+Dept comparison
+Trend over time
+
+👉 This = dashboard mindset
+
+🏭 PART 5 — INDUSTRY TASK
+
+👉 Scenario:
+Manager asks:
+
+Which department pays more?
+What is salary trend?
+Your job:
+
+✔ Create interactive charts
+✔ Present insights
+
+💻 PART 6 — HANDS-ON PRACTICE
+Dataset:
+data = {
+    "dept": ["IT", "HR", "IT", "HR", "IT"],
+    "salary": [50000, 40000, 60000, 45000, 70000]
+}
+✅ Tasks:
+
+✔ Bar chart → dept vs salary
+✔ Scatter → index vs salary
+✔ Line → salary trend
+
+🧪 PART 7 — MINI PROJECT (MANDATORY)
+🎯 Interactive Employee Dashboard
+Input:
+data = {
+    "dept": ["IT", "HR", "IT", "HR", "IT"],
+    "salary": [50000, 40000, 60000, 45000, 70000]
+}
+You must:
+
+✔ Create:
+
+Bar chart
+Scatter plot
+Line chart
+
+✔ Add:
+
+Titles
+Labels
+
+✔ Explain insights
+
+🎤 PART 8 — INTERVIEW PREP
+🔹 Q1: What is Plotly?
+
+👉 Interactive visualization library
+
+🔹 Q2: Why interactive charts?
+
+👉 Better user understanding
+
+🔹 Q3: Static vs interactive?
+
+👉 Static = fixed
+👉 Interactive = dynamic
+
+🔥 COMMON MISTAKES
+
+❌ Overloading charts
+❌ No clear labels
+❌ No explanation
+
+🧠 INDUSTRY INSIGHT
+
+👉 Tools like:
+
+Power BI
+Tableau
+
+👉 Work on same concept as Plotly
+
+✅ SUBMISSION
+
+After completing:
+
+Charts (code)
+2–3 insight
