@@ -1,0 +1,134 @@
+🧠 PART 1 — THEORY (INTERVIEW LEVEL)
+🔹 What is an Outlier?
+
+👉 Value far away from normal data
+
+📌 Example:
+
+Salaries: 30k, 40k, 50k, 5,00,000 ← outlier
+🔹 Why Important?
+Distorts analysis
+Affects ML models
+Gives wrong insights
+📊 PART 2 — DETECTING OUTLIERS
+🔹 Using Boxplot (visual idea)
+6
+🔹 Using IQR (INTERVIEW IMPORTANT)
+Q1 = df["salary"].quantile(0.25)
+Q3 = df["salary"].quantile(0.75)
+
+IQR = Q3 - Q1
+
+lower = Q1 - 1.5 * IQR
+upper = Q3 + 1.5 * IQR
+
+outliers = df[(df["salary"] < lower) | (df["salary"] > upper)]
+🛠️ PART 3 — HANDLING OUTLIERS
+✅ Method 1: Remove
+df = df[(df["salary"] >= lower) & (df["salary"] <= upper)]
+✅ Method 2: Cap (Winsorization idea)
+df["salary"] = df["salary"].clip(lower, upper)
+
+👉 Interview tip:
+
+Remove → when error
+Cap → when valid but extreme
+📉 PART 4 — SKEWNESS (VERY IMPORTANT)
+🔹 What is Skewness?
+
+👉 Data not symmetric
+
+Right skew → long tail right
+Left skew → long tail left
+🔹 Check Skewness
+df["salary"].skew()
+🔧 PART 5 — TRANSFORMATIONS
+🔹 Log Transform (IMPORTANT)
+import numpy as np
+
+df["salary_log"] = np.log(df["salary"])
+
+👉 Used to:
+
+Reduce skewness
+Normalize data
+💻 PART 6 — HANDS-ON PRACTICE
+Dataset:
+data = {
+    "salary": [30000, 40000, 50000, 60000, 500000]
+}
+✅ Tasks:
+
+✔ Detect outliers
+✔ Remove or cap
+✔ Apply log transform
+✔ Check skewness before & after
+
+🏭 PART 7 — INDUSTRY TASK
+
+👉 Scenario:
+Salary dataset has extreme values
+
+Your job:
+
+✔ Detect anomalies
+✔ Fix skewness
+✔ Prepare for ML
+
+📊 PART 8 — DATA THINKING
+
+Companies ask:
+
+Are there anomalies?
+Is data balanced?
+Is distribution normal?
+
+👉 This step = model improvement stage
+
+🧪 PART 9 — MINI PROJECT (MANDATORY)
+🎯 Salary Data Cleaner
+Input:
+data = {
+    "salary": [30000, 40000, 50000, 60000, 500000]
+}
+You must:
+
+✔ Detect outliers (IQR)
+✔ Remove or cap
+✔ Apply log transform
+✔ Compare skewness
+
+Expected Output:
+
+👉 Clean dataset + new column
+
+🎤 PART 10 — INTERVIEW PREP
+🔹 Q1: What is outlier?
+
+👉 Extreme value
+
+🔹 Q2: What is IQR?
+
+👉 Measure to detect outliers
+
+🔹 Q3: Why log transform?
+
+👉 Reduce skewness
+
+🔥 COMMON MISTAKES
+
+❌ Removing important data blindly
+❌ Ignoring skewness
+❌ Not checking distribution
+
+🧠 INDUSTRY INSIGHT
+
+👉 Many ML failures = bad data distribution
+👉 This step improves accuracy significantly
+
+✅ SUBMISSION
+
+After completing:
+
+Mini project code
+Before/after skewness result
