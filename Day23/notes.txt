@@ -1,0 +1,281 @@
+🧠 PART 1 — CENTRAL TENDENCY
+
+Central tendency means:
+
+👉 "What is the center of the data?"
+
+1. Mean (Average)
+
+Formula:
+
+Example:
+
+data = [10,20,30,40,50]
+
+Mean:
+
+30
+Python
+import numpy as np
+
+np.mean(data)
+Industry Usage
+
+Used for:
+
+Average salary
+Average sales
+Average customer spending
+Problem With Mean
+
+Dataset:
+
+[10,20,30,40,1000]
+
+Mean becomes:
+
+220
+
+Not representative.
+
+Outliers affect mean heavily.
+
+2. Median
+
+Middle value after sorting.
+
+Dataset:
+
+[10,20,30,40,1000]
+
+Median:
+
+30
+Python
+np.median(data)
+Industry Usage
+
+Used in:
+
+Income analysis
+House prices
+Salary reports
+
+Because it is resistant to outliers.
+
+3. Mode
+
+Most frequent value.
+
+Dataset:
+
+[10,20,20,30,40]
+
+Mode:
+
+20
+Python
+from scipy import stats
+
+stats.mode(data)
+Industry Usage
+Most sold product
+Most common category
+Customer preferences
+📊 PART 2 — PERCENTILES
+
+Percentiles tell us:
+
+"What percentage of data lies below this point?"
+
+Example
+
+90th percentile:
+
+Means:
+
+90% of observations are below it.
+
+10% are above it.
+
+Python
+np.percentile(data,90)
+Industry Usage
+Top customers
+Top performers
+Salary benchmarking
+📊 PART 3 — QUARTILES
+
+Quartiles divide data into 4 parts.
+
+Q1
+
+25th percentile
+
+Q2
+
+50th percentile
+
+Median
+
+Q3
+
+75th percentile
+
+Python
+np.percentile(data,25)
+np.percentile(data,50)
+np.percentile(data,75)
+Industry Usage
+
+Used for:
+
+Outlier detection
+Salary segmentation
+Customer segmentation
+📈 PART 4 — DISTRIBUTION BASICS
+What is Distribution?
+
+Distribution shows:
+
+How data is spread.
+
+Example:
+
+Employee salaries:
+
+[30000,35000,40000,45000,50000]
+
+Tightly grouped.
+
+Another:
+
+[30000,40000,50000,100000,500000]
+
+Highly spread.
+
+Visualize:
+
+import seaborn as sns
+
+sns.histplot(data,kde=True)
+💻 PART 5 — HANDS-ON PRACTICE
+
+Dataset:
+
+salary = [
+30000,
+35000,
+40000,
+45000,
+50000,
+55000,
+60000,
+65000,
+70000,
+100000
+]
+
+Calculate:
+
+Task 1
+
+Mean
+
+Task 2
+
+Median
+
+Task 3
+
+Mode
+
+Task 4
+
+Q1
+
+Task 5
+
+Q3
+
+Task 6
+
+90th Percentile
+
+Task 7
+
+Histogram
+
+🏭 PART 6 — INDUSTRY TASK
+
+Scenario:
+
+HR wants to analyze salaries.
+
+Questions:
+
+Average salary?
+Median salary?
+Top 10% salary threshold?
+Are there outliers?
+
+Use statistics to answer.
+
+🧪 PART 7 — MINI PROJECT
+Salary Statistics Analyzer
+
+Dataset:
+
+salary = [
+30000,
+35000,
+40000,
+45000,
+50000,
+55000,
+60000,
+65000,
+70000,
+100000
+]
+
+Build:
+
+✔ Mean
+
+✔ Median
+
+✔ Mode
+
+✔ Quartiles
+
+✔ Percentiles
+
+✔ Histogram
+
+✔ Business Interpretation
+
+🎤 PART 8 — INTERVIEW QUESTIONS
+Q1
+
+Mean vs Median?
+
+Q2
+
+When should Median be preferred?
+
+Q3
+
+What is Mode?
+
+Q4
+
+What is Percentile?
+
+Q5
+
+What is Quartile?
+
+Q6
+
+Why are Percentiles used in business?

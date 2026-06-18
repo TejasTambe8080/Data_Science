@@ -1,0 +1,568 @@
+Perfect. Since you're preparing for **AI/ML and Data Science interviews**, don't just memorize formulas. Understand **what each formula means**.
+
+# 🎯 DAY 25 – Probability Foundations for Machine Learning
+
+---
+
+# 1️⃣ What is Probability?
+
+Probability tells us:
+
+> **How likely an event is to happen.**
+
+Formula:
+
+```text
+Probability = Favorable Outcomes / Total Outcomes
+```
+
+[
+P(E)=\frac{\text{Favorable Outcomes}}{\text{Total Outcomes}}
+]
+
+---
+
+## Example: Dice Roll
+
+Sample Space:
+
+```text
+S = {1,2,3,4,5,6}
+```
+
+Probability of getting 3:
+
+```text
+Favorable Outcomes = 1
+
+Total Outcomes = 6
+```
+
+[
+P(3)=\frac{1}{6}
+]
+
+```text
+= 0.1667
+= 16.67%
+```
+
+---
+
+# 2️⃣ Sample Space
+
+Definition:
+
+> Collection of all possible outcomes.
+
+### Dice
+
+```text
+S = {1,2,3,4,5,6}
+```
+
+Number of outcomes:
+
+```text
+n(S) = 6
+```
+
+### Coin
+
+```text
+S = {H,T}
+```
+
+Number of outcomes:
+
+```text
+n(S)=2
+```
+
+---
+
+### Interview Answer
+
+> Sample Space is the set of all possible outcomes of an experiment.
+
+---
+
+# 3️⃣ Event
+
+Definition:
+
+> An event is a subset of the sample space.
+
+### Example
+
+Dice:
+
+```text
+S={1,2,3,4,5,6}
+```
+
+Event A:
+
+```text
+Getting an even number
+
+A={2,4,6}
+```
+
+Number of favorable outcomes:
+
+```text
+3
+```
+
+Probability:
+
+[
+P(A)=\frac{3}{6}
+]
+
+```text
+= 0.5
+```
+
+---
+
+# 4️⃣ Independent Events
+
+Definition:
+
+Two events are independent if:
+
+> One event does not affect the other.
+
+Example:
+
+```text
+Coin Toss
+Dice Roll
+```
+
+Coin result does not affect dice result.
+
+---
+
+Formula:
+
+genui{"probability_statistics_learning_block_staging":{"type_id":"INDEPENDENT_PROBABILITY_INTERSECTION"}}
+
+### Example
+
+Probability:
+
+```text
+Head AND Dice=6
+```
+
+Head:
+
+[
+P(H)=\frac{1}{2}
+]
+
+Dice=6:
+
+[
+P(6)=\frac{1}{6}
+]
+
+Therefore:
+
+[
+P(H \cap 6)
+===========
+
+\frac{1}{2}
+\times
+\frac{1}{6}
+===========
+
+\frac{1}{12}
+]
+
+```text
+= 0.0833
+```
+
+---
+
+# 5️⃣ Conditional Probability
+
+Definition:
+
+Probability of A occurring given B has already occurred.
+
+Example:
+
+Class:
+
+```text
+50 Students
+
+30 Boys
+
+20 Girls
+
+10 Girls Play Cricket
+```
+
+Question:
+
+Probability that a student plays cricket GIVEN that the student is a girl.
+
+Formula:
+
+genui{"probability_statistics_learning_block_staging":{"type_id":"CONDITIONAL_PROBABILITY_DEFINITION"}}
+
+Calculation:
+
+[
+P(Cricket|Girl)
+===============
+
+# \frac{10}{20}
+
+0.5
+]
+
+```text
+50%
+```
+
+Meaning:
+
+> If we already know the student is a girl, there is a 50% chance she plays cricket.
+
+---
+
+# Why Conditional Probability Matters in ML?
+
+Used in:
+
+### Fraud Detection
+
+```text
+P(Fraud | Transaction Pattern)
+```
+
+### Medical Diagnosis
+
+```text
+P(Disease | Symptoms)
+```
+
+### Recommendation Systems
+
+```text
+P(Buy Product | User Behavior)
+```
+
+---
+
+# 6️⃣ Bayes Theorem
+
+The most important probability formula in ML.
+
+Definition:
+
+> Update your belief when new evidence arrives.
+
+Formula:
+
+genui{"probability_statistics_learning_block_staging":{"type_id":"BAYES_THEOREM"}}
+
+---
+
+# Understanding the Formula
+
+Suppose:
+
+```text
+A = Email is Spam
+
+B = Email contains "FREE MONEY"
+```
+
+We want:
+
+```text
+P(Spam | Free Money)
+```
+
+Meaning:
+
+> Probability email is spam given it contains "FREE MONEY".
+
+Bayes uses:
+
+1. Prior Probability
+
+```text
+P(Spam)
+```
+
+2. Evidence
+
+```text
+P(Free Money)
+```
+
+3. Likelihood
+
+```text
+P(Free Money | Spam)
+```
+
+To calculate:
+
+```text
+P(Spam | Free Money)
+```
+
+---
+
+# Real Life Example
+
+Hospital Test
+
+Suppose:
+
+```text
+1% people have disease
+
+Test detects disease correctly 95% of time
+```
+
+Patient tests positive.
+
+Question:
+
+```text
+What is the probability patient actually has disease?
+```
+
+Bayes Theorem solves this.
+
+---
+
+# Why Bayes is Important in ML?
+
+Used in:
+
+### Naive Bayes Classifier
+
+Classifies:
+
+```text
+Spam / Not Spam
+
+Positive / Negative Review
+
+Fraud / Normal
+```
+
+---
+
+# Python Practice
+
+## Dice Probability
+
+```python
+favorable = 1
+total = 6
+
+probability = favorable / total
+
+print(probability)
+```
+
+Output:
+
+```text
+0.1667
+```
+
+---
+
+## Conditional Probability
+
+```python
+girls = 20
+girls_cricket = 10
+
+probability = girls_cricket / girls
+
+print(probability)
+```
+
+Output:
+
+```text
+0.5
+```
+
+---
+
+# Mini Project
+
+## Customer Purchase Probability Analyzer
+
+Dataset:
+
+```python
+customers = {
+    "visited":100,
+    "purchased":25
+}
+```
+
+Code:
+
+```python
+visited = 100
+purchased = 25
+
+purchase_probability = purchased / visited
+
+no_purchase_probability = 1 - purchase_probability
+
+print("Purchase Probability:", purchase_probability)
+
+print("No Purchase Probability:", no_purchase_probability)
+```
+
+Output:
+
+```text
+Purchase Probability = 0.25
+
+No Purchase Probability = 0.75
+```
+
+---
+
+# Industry Task
+
+Company Data:
+
+```text
+1000 Transactions
+
+50 Fraud
+
+950 Normal
+```
+
+Question:
+
+Probability a random transaction is fraud?
+
+Formula:
+
+[
+P(Fraud)
+========
+
+\frac{50}{1000}
+]
+
+[
+=0.05
+]
+
+```text
+= 5%
+```
+
+### Interpretation
+
+> Out of every 100 transactions, approximately 5 may be fraudulent.
+
+---
+
+# Most Asked Interview Questions
+
+### Q1 What is Probability?
+
+> Probability measures the likelihood of an event occurring.
+
+---
+
+### Q2 What is Sample Space?
+
+> Set of all possible outcomes.
+
+---
+
+### Q3 Independent vs Dependent Events?
+
+**Independent**
+
+```text
+Coin Toss + Dice Roll
+```
+
+One does not affect the other.
+
+**Dependent**
+
+```text
+Drawing cards without replacement
+```
+
+First card affects second card.
+
+---
+
+### Q4 What is Conditional Probability?
+
+> Probability of an event occurring given another event has already occurred.
+
+---
+
+### Q5 State Bayes Theorem
+
+> Bayes Theorem updates probability using new evidence.
+
+---
+
+### Q6 Where is Bayes Theorem Used?
+
+* Spam Detection
+* Fraud Detection
+* Medical Diagnosis
+* Recommendation Systems
+* Naive Bayes Classifier
+
+---
+
+# 30-Second Revision
+
+```text
+Sample Space → All outcomes
+
+Event → Subset of outcomes
+
+Probability → Favorable / Total
+
+Independent Events →
+P(A and B)=P(A)×P(B)
+
+Conditional Probability →
+P(A|B)
+
+Bayes Theorem →
+Updates belief using evidence
+
+Applications →
+Spam Detection
+Fraud Detection
+Medical Diagnosis
+Naive Bayes
+```
+
+These concepts are the foundation of probability and will directly connect to **Day 26: Normal Distribution, Binomial Distribution, Bell Curve, and Z-Scores**, which are heavily used in Machine Learning and Data Science interviews. 🚀

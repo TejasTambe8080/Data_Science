@@ -1,0 +1,360 @@
+🚀 DAY 24 — VARIANCE + STANDARD DEVIATION + SPREAD OF DATA
+🎯 Why This Topic Matters
+
+Yesterday we learned:
+
+Mean
+Median
+Mode
+
+These tell us where the center of data is.
+
+Today we learn:
+
+👉 How spread out the data is.
+
+Two datasets can have the same mean but completely different behavior.
+
+Example:
+
+Dataset A
+
+48 49 50 51 52
+
+Mean = 50
+
+Dataset B
+
+10 20 50 80 90
+
+Mean = 50
+
+Same mean.
+
+Completely different spread.
+
+This is why Variance and Standard Deviation exist.
+
+🎯 End Goal
+
+By the end of Day 24 you should understand:
+
+✅ Range
+
+✅ Variance
+
+✅ Standard Deviation
+
+✅ IQR Review
+
+✅ Coefficient of Variation
+
+✅ Business Interpretation
+
+✅ ML Importance
+
+⏱️ 5-Hour Schedule
+Topic	Time
+Theory	1.5 Hours
+Python Practice	1.5 Hours
+Statistical Analysis	1 Hour
+Mini Project	30 Min
+Interview Questions	30 Min
+🧠 PART 1 — RANGE
+What is Range?
+
+Difference between:
+
+Maximum Value - Minimum Value
+
+Formula:
+
+Example
+
+salary = [30000,40000,50000,60000]
+
+Range:
+
+60000 - 30000
+
+Result:
+
+30000
+Python
+max(salary) - min(salary)
+Limitation
+
+Uses only:
+
+Max value
+Min value
+
+Ignores everything else.
+
+🧠 PART 2 — VARIANCE
+What is Variance?
+
+Measures:
+
+👉 Average squared distance from the mean.
+
+Formula:
+
+Meaning:
+
+Higher Variance
+
+👉 Data is widely spread
+
+Lower Variance
+
+👉 Data is tightly clustered
+
+Python
+import numpy as np
+
+np.var(salary)
+Industry Example
+
+Dataset A:
+
+[48,49,50,51,52]
+
+Low Variance
+
+Dataset B:
+
+[10,20,50,80,90]
+
+High Variance
+
+🧠 PART 3 — STANDARD DEVIATION
+What is Standard Deviation?
+
+Square root of Variance.
+
+Formula:
+
+Why use it?
+
+Because variance is in squared units.
+
+Standard deviation brings it back to original units.
+
+Python
+np.std(salary)
+Interpretation
+
+Small SD
+
+👉 Consistent data
+
+Large SD
+
+👉 Highly variable data
+
+🧠 PART 4 — IQR (REVIEW)
+
+We saw this in Day 18.
+
+Formula:
+
+Used for:
+
+Outlier Detection
+Distribution Analysis
+Python
+Q1 = np.percentile(data,25)
+
+Q3 = np.percentile(data,75)
+
+IQR = Q3 - Q1
+🧠 PART 5 — COEFFICIENT OF VARIATION
+
+Advanced interview topic.
+
+Formula:
+
+Purpose:
+
+Compare variability across datasets.
+
+Example:
+
+Company A
+
+Mean Salary = 50k
+
+SD = 5k
+
+Company B
+
+Mean Salary = 1L
+
+SD = 5k
+
+Same SD
+
+Different impact.
+
+CV helps compare fairly.
+
+💻 PART 6 — HANDS-ON PRACTICE
+
+Dataset
+
+salary = [
+30000,
+35000,
+40000,
+45000,
+50000,
+55000,
+60000,
+65000,
+70000,
+100000
+]
+
+Calculate:
+
+Task 1
+
+Range
+
+Task 2
+
+Variance
+
+Task 3
+
+Standard Deviation
+
+Task 4
+
+Q1
+
+Task 5
+
+Q3
+
+Task 6
+
+IQR
+
+Task 7
+
+Coefficient of Variation
+
+📊 PART 7 — VISUALIZATION
+
+Create:
+
+Histogram
+
+import seaborn as sns
+
+sns.histplot(salary,kde=True)
+
+Boxplot
+
+sns.boxplot(x=salary)
+
+Observe:
+
+Spread
+Outliers
+🏭 PART 8 — INDUSTRY TASK
+
+Scenario:
+
+HR wants salary stability analysis.
+
+Questions:
+
+Is salary distribution stable?
+How much variation exists?
+Are there outliers?
+Is compensation consistent?
+
+Use:
+
+Variance
+SD
+IQR
+
+To answer.
+
+🧪 PART 9 — MINI PROJECT
+Salary Spread Analyzer
+
+Dataset
+
+salary = [
+30000,
+35000,
+40000,
+45000,
+50000,
+55000,
+60000,
+65000,
+70000,
+100000
+]
+
+Build:
+
+✔ Range
+
+✔ Variance
+
+✔ Standard Deviation
+
+✔ IQR
+
+✔ CV
+
+✔ Histogram
+
+✔ Boxplot
+
+✔ Business Interpretation
+
+🎤 PART 10 — INTERVIEW QUESTIONS
+Q1
+
+What is Variance?
+
+Q2
+
+Why Standard Deviation instead of Variance?
+
+Q3
+
+What does high SD indicate?
+
+Q4
+
+What is IQR?
+
+Q5
+
+What is Coefficient of Variation?
+
+Q6
+
+When would you use IQR instead of SD?
+
+Answer:
+
+👉 When outliers exist.
+
+🔥 MOST ASKED INTERVIEW QUESTION
+Two datasets have same mean.
+
+Why can Standard Deviation still be different?
+
+Expected Answer:
+
+Because spread of values can differ even if the average is identical
