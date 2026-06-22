@@ -1,0 +1,340 @@
+🧠 PART 1 — WHAT IS A DISTRIBUTION?
+
+A distribution tells us:
+
+👉 How data is spread.
+
+Example:
+
+Employee Salaries
+
+30000
+35000
+40000
+45000
+50000
+
+Distribution helps answer:
+
+Where most values lie?
+How spread is the data?
+Are there unusual values?
+🧠 PART 2 — NORMAL DISTRIBUTION (MOST IMPORTANT)
+Definition
+
+A symmetric bell-shaped distribution.
+
+Characteristics:
+
+✅ Mean = Median = Mode
+
+✅ Symmetric
+
+✅ Bell-shaped
+
+Bell Curve
+            /\
+          /    \
+        /        \
+      /            \
+____/                \____
+Real Examples
+Heights
+IQ Scores
+Exam Marks
+Measurement Errors
+Python Visualization
+import numpy as np
+import seaborn as sns
+
+data = np.random.normal(
+    loc=50,
+    scale=10,
+    size=1000
+)
+
+sns.histplot(data, kde=True)
+📊 PART 3 — THE 68-95-99.7 RULE
+
+Interview Favorite.
+
+For Normal Distribution:
+
+68% within 1 SD
+95% within 2 SD
+99.7% within 3 SD
+
+Visual idea:
+
+      68%
+   <------>
+
+95%
+<---------->
+
+99.7%
+<-------------->
+Business Example
+
+Average Salary = ₹50k
+
+SD = ₹10k
+
+Most employees:
+
+40k to 60k
+🧠 PART 4 — UNIFORM DISTRIBUTION
+Definition
+
+Every outcome has equal probability.
+
+Example:
+
+Rolling a fair dice.
+
+1 2 3 4 5 6
+
+All equally likely.
+
+Python
+data = np.random.uniform(
+    low=0,
+    high=10,
+    size=1000
+)
+
+sns.histplot(data)
+Industry Example
+
+Randomized testing.
+
+🧠 PART 5 — BINOMIAL DISTRIBUTION
+
+Used when:
+
+Only two outcomes exist.
+
+Examples:
+
+Success / Failure
+Yes / No
+Click / No Click
+
+Example:
+
+10 users see advertisement.
+
+Probability of click:
+
+0.3
+
+Question:
+
+How many clicks expected?
+
+Python
+data = np.random.binomial(
+    n=10,
+    p=0.3,
+    size=1000
+)
+Industry Uses
+Marketing
+CTR Prediction
+Customer Conversion
+🧠 PART 6 — Z-SCORE (VERY IMPORTANT)
+Definition
+
+Measures how far a value is from the mean.
+
+Formula:
+
+Where:
+
+x = value
+μ = mean
+σ = standard deviation
+Example
+
+Salary:
+
+70000
+
+Mean:
+
+50000
+
+SD:
+
+10000
+
+Z-score:
+
+(70000-50000)/10000
+= 2
+
+Meaning:
+
+2 standard deviations above average.
+
+Python
+from scipy.stats import zscore
+
+df["zscore"] = zscore(df["salary"])
+🚨 PART 7 — OUTLIER DETECTION USING Z-SCORE
+
+Rule:
+
+|Z| > 3
+
+Usually considered outlier.
+
+Example:
+
+Salary = 500000
+
+Likely outlier.
+
+Python
+df[
+    abs(df["zscore"]) > 3
+]
+💻 PART 8 — HANDS-ON PRACTICE
+
+Dataset:
+
+salary = [
+30000,
+35000,
+40000,
+45000,
+50000,
+55000,
+60000,
+65000,
+70000,
+100000
+]
+
+Tasks:
+
+Task 1
+
+Calculate Mean
+
+Task 2
+
+Calculate SD
+
+Task 3
+
+Calculate Z-score for every salary
+
+Task 4
+
+Identify outliers
+
+Task 5
+
+Visualize histogram
+
+🏭 PART 9 — INDUSTRY TASK
+
+Scenario:
+
+HR wants to identify unusually high salaries.
+
+Use:
+
+Mean
+SD
+Z-score
+
+Determine:
+
+Normal employees
+Exceptional employees
+🧪 PART 10 — MINI PROJECT
+Employee Salary Distribution Analyzer
+
+Dataset:
+
+salary = [
+30000,
+35000,
+40000,
+45000,
+50000,
+55000,
+60000,
+65000,
+70000,
+100000
+]
+
+Build:
+
+✔ Histogram
+
+✔ Mean
+
+✔ SD
+
+✔ Z-score
+
+✔ Outlier Detection
+
+✔ Business Interpretation
+
+🎤 PART 11 — INTERVIEW QUESTIONS
+Q1
+
+What is Normal Distribution?
+
+Q2
+
+Why is it called Bell Curve?
+
+Q3
+
+Explain 68-95-99.7 Rule.
+
+Q4
+
+What is Uniform Distribution?
+
+Q5
+
+What is Binomial Distribution?
+
+Q6
+
+What is Z-score?
+
+Q7
+
+How do you detect outliers using Z-score?
+
+🔥 MOST ASKED INTERVIEW QUESTION
+
+Why do many ML algorithms prefer normally distributed data?
+
+Answer:
+
+Because many statistical assumptions and optimization techniques work better when data follows a normal distribution.
+
+🧠 INDUSTRY INSIGHT
+
+Distributions are used in:
+
+✅ Anomaly Detection
+
+✅ Forecasting
+
+✅ Feature Scaling
+
+✅ Hypothesis Testing
+
+✅ Financial Risk Models
+
+✅ Machine Learning
